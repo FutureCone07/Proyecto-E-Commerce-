@@ -14,6 +14,7 @@ El sistema sigue una arquitectura de **N-Capas** (Client-Server) para separar la
 
 El siguiente diagrama muestra cómo interactúan los componentes dentro de la **Azure VM** utilizando **Docker**.
 
+```mermaid
 graph TD
     subgraph Cliente
         A[Frontend: React + Tailwind CSS]
@@ -34,13 +35,13 @@ graph TD
     C -->|Consulta Validada| D
     B -->|Procesar Pago| E
 
-
+```
 
 ## 3. Diagrama de la Base de Datos (Modelo de Datos)
 Para el e-commerce de electrodomésticos, utilizaremos un modelo de documentos en MongoDB.
 
 El sistema sigue una estructura lógica para asegurar la integridad de la información conforme a la ISO 27001.
-
+```mermaid
 erDiagram
     USUARIO ||--o{ ORDEN : "genera"
     USUARIO {
@@ -64,7 +65,7 @@ erDiagram
         float total
         string mercadoPagoId
     }
-
+```
 
 
 
